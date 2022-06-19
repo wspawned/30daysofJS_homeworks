@@ -50,9 +50,36 @@ console.log(Math.floor(Math.random()*101))                  // btw 0-100
 console.log(Math.floor(50 + Math.random()*(51)))            // btw 50-100
 console.log(Math.floor(Math.random()*256))                  // btw 0-255
 
-
+// 10 n 11
 
 const firstIndex = because.indexOf('b')
 const lastIndex = because.lastIndexOf('e')
 console.log(because.substr(firstIndex,lastIndex - firstIndex + 1))
 
+// level3
+
+const love = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+console.log(love.match(/love/gi).length)
+console.log(because.match(/because/gi).length)
+
+const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+console.log(sentence.replace(/[^a-zA-Z ]/g, ""))       // how to find most frequent word
+
+const income = 'He earns 5000 euro from salary per month, 10000 euro monthly bonus, 15000 euro online courses per month.'
+const arr = income.match(/\d+/g)
+let newArr = []
+const casting = function(string) {
+    return parseInt(string)
+}
+
+arr.forEach(function(item) {
+    item = casting(item)
+    newArr.push(item)
+})
+console.log(newArr)
+
+let monthly = 0
+newArr.forEach(function(element) {   
+    return monthly = monthly + element
+})
+console.log(monthly)
